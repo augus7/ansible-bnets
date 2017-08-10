@@ -1,0 +1,17 @@
+---
+# This playbook configures bayanihanets nodes
+
+- name: apply common configuration to all nodes
+  hosts: all
+  gather_facts: no
+
+  roles:
+    - common
+
+#- name: configure and deploy the webservers and application code
+#  hosts: staging
+#  gather_facts: no
+#
+#   roles:
+#     - web
+...

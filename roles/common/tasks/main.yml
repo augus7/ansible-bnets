@@ -1,0 +1,15 @@
+- name: change ssid
+  change_ssid.py:
+    hostname: "{{ inventory_hostname }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    parameter: wireless
+    settings:
+        name: wlan-guest
+        master-interface: wlan-home
+        security-profile: default
+        ssid: BAYANIHANETS-test12345
+        disabled: "no"
+        wps-mode: disabled
+        mode: ap-bridge
+  delegate_to: 127.0.0.1
